@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shalev Widen — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/css/main.css" />
+  </head>
+  <body>
+    <!-- Full-viewport canvas: dots react to pointer (see js/dot-grid.js) -->
+    <canvas id="dot-grid" class="dot-grid" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <a class="logo" href="#top">Shalev Widen</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- ========== HERO ========== -->
+      <section class="hero section" aria-labelledby="hero-heading">
+        <div class="hero__layout">
+          <div class="hero__copy">
+            <p class="hero__eyebrow">Economics · UT Austin · Class of 2027</p>
+            <h1 id="hero-heading" class="hero__title">
+              Building thoughtful software at the intersection of data, design,
+              and systems.
+            </h1>
+            <p class="hero__intro">
+              Aspiring
+              <strong>Software &amp; AI engineer</strong>. <br />Relentless
+              drive compined with unwavering obsession.
+            </p>
+            <ul class="skill-chips" aria-label="Highlighted skills">
+              <li>Python</li>
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>SQL</li>
+              <li>Flask</li>
+              <li>PostgreSQL</li>
+              <li>Docker</li>
+              <li>GCP</li>
+              <li>Vercel</li>
+              <li>Excel</li>
+            </ul>
+            <div id="contact" class="hero__contact">
+              <a class="contact-link" href="mailto:shalevwiden@utexas.edu"
+                >shalevwiden@utexas.edu</a
+              >
+              <span class="contact-dot" aria-hidden="true">·</span>
+              <a
+                class="contact-link"
+                href="https://linkedin.com/in/shalev-widen"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+              <span class="contact-dot" aria-hidden="true">·</span>
+              <a
+                class="contact-link"
+                href="https://github.com/shalevwiden"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </div>
+          </div>
+          <figure class="hero__figure">
+            <!-- Replace images/hero.jpg with your photo -->
+            <img
+              src="images/hero.jpg"
+              alt="Portrait of Shalev Widen"
+              width="440"
+              height="520"
+              loading="eager"
+              class="hero__img"
+            />
+            <figcaption class="sr-only">Portfolio hero image</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ========== SOFTWARE PROJECTS ==========
+           COPY/PASTE TEMPLATE — duplicate the entire <article class="project-card">…</article>
+           block below (Projects grid). Update href, title, dates, tech line, bullets, and img src.
+      -->
+      <section id="projects" class="section section--reveal">
+        <div class="section__head">
+          <h2 class="section__title">Software projects</h2>
+          <p class="section__lede">
+            Selected work spanning full-stack apps, automation, data tooling,
+            and creative front-end experiments.
+          </p>
+        </div>
+        <div class="card-grid card-grid--projects">
+          <article class="project-card">
+            <a
+              class="project-card__media"
+              href="https://records-frontend.onrender.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="images/projects/records.jpg"
+                alt=""
+                width="640"
+                height="360"
+                loading="lazy"
+              />
+            </a>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <h3 class="project-card__title">
+                  <a
+                    href="https://records-frontend.onrender.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Records</a
+                  >
+                </h3>
+                <time class="project-card__date" datetime="2026-04"
+                  >April 2026</time
+                >
+              </div>
+              <p class="project-card__tech">
+                React (TypeScript), Flask, PostgreSQL, Docker
+              </p>
+              <ul class="project-card__list">
+                <li>
+                  Architected and deployed a full-stack React SPA and Flask REST
+                  API with PostgreSQL, containerized with Docker.
+                </li>
+                <li>
+                  Implemented core product flows: accounts, listening logs,
+                  reviews, follows, and an activity-style feed.
+                </li>
+                <li>
+                  Built a centralized, type-safe media and album catalog in
+                  TypeScript for consistent images and metadata across the UI.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__media project-card__media--static">
+              <img
+                src="images/projects/ai-agents.jpg"
+                alt=""
+                width="640"
+                height="360"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <h3 class="project-card__title">
+                  AI agents &amp; automation (n8n)
+                </h3>
+                <time class="project-card__date" datetime="2026-04"
+                  >April 2026</time
+                >
+              </div>
+              <p class="project-card__tech">
+                OpenAI API, Google Workspace, n8n
+              </p>
+              <ul class="project-card__list">
+                <li>
+                  Built a personal assistant using the OpenAI API with
+                  integrations into Google Sheets, Gmail, and Calendar via
+                  sub-agents.
+                </li>
+                <li>
+                  Designed an n8n workflow agent that captures form inputs and
+                  conditionally routes structured data.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <a
+              class="project-card__media"
+              href="https://degreeviewsite.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="images/projects/degreeview.jpg"
+                alt=""
+                width="640"
+                height="360"
+                loading="lazy"
+              />
+            </a>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <h3 class="project-card__title">
+                  <a
+                    href="https://degreeviewsite.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >DegreeView</a
+                  >
+                </h3>
+                <p class="project-card__range">
+                  <time datetime="2025-06">June 2025</time> — Present
+                </p>
+              </div>
+              <p class="project-card__tech">
+                Python, data pipelines, analytics
+              </p>
+              <ul class="project-card__list">
+                <li>
+                  Designed a flexible multi-university system analyzing 90,191
+                  courses across 1,262 departments from 10 universities.
+                </li>
+                <li>
+                  Produced visualizations for all 141 degree programs at UT
+                  Austin and pipelined catalog data into 1,005 downloadable
+                  artifacts.
+                </li>
+                <li>
+                  Implemented Google Analytics — reached roughly 2.4K users,
+                  15.2K page views, and 600 file downloads (figures vary by
+                  measurement window).
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <a
+              class="project-card__media"
+              href="https://blurbifyapp.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="images/projects/blurbify.jpg"
+                alt=""
+                width="640"
+                height="360"
+                loading="lazy"
+              />
+            </a>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <h3 class="project-card__title">
+                  <a
+                    href="https://blurbifyapp.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Blurbify</a
+                  >
+                </h3>
+                <p class="project-card__range">
+                  <time datetime="2025-10">October 2025</time> — Present
+                </p>
+              </div>
+              <p class="project-card__tech">HTML, SCSS, JavaScript</p>
+              <ul class="project-card__list">
+                <li>
+                  Built a site for creating and customizing short-form text and
+                  image posts (“Blurbs”).
+                </li>
+                <li>
+                  Implemented five distinct animations plus a toggleable
+                  flying-image interaction using SCSS and JS.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <a
+              class="project-card__media"
+              href="https://tinyurl.com/excelanimation"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="images/projects/excel-animation.jpg"
+                alt=""
+                width="640"
+                height="360"
+                loading="lazy"
+              />
+            </a>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <h3 class="project-card__title">
+                  <a
+                    href="https://tinyurl.com/excelanimation"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Animation with Files</a
+                  >
+                </h3>
+                <p class="project-card__range">
+                  <time datetime="2025-06">June 2025</time> —
+                  <time datetime="2025-09">September 2025</time>
+                </p>
+              </div>
+              <p class="project-card__tech">
+                Python, JSON-driven file generation
+              </p>
+              <ul class="project-card__list">
+                <li>
+                  Engineered a JSON-based system to sequentially generate files
+                  enabling animation-like visualizations.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <a
+              class="project-card__media"
+              href="https://github.com/shalevwiden/turtleanimations"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="images/projects/svg-animation.jpg"
+                alt=""
+                width="640"
+                height="360"
+                loading="lazy"
+              />
+            </a>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <h3 class="project-card__title">
+                  <a
+                    href="https://github.com/shalevwiden/turtleanimations"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >SVG animation software</a
+                  >
+                </h3>
+                <p class="project-card__range">
+                  <time datetime="2025-09">September 2025</time> —
+                  <time datetime="2025-11">November 2025</time>
+                </p>
+              </div>
+              <p class="project-card__tech">
+                Python, Turtle graphics, OOP, DaVinci Resolve
+              </p>
+              <ul class="project-card__list">
+                <li>
+                  Developed SVG-focused animation tooling using Python Turtle
+                  graphics with an object-oriented structure.
+                </li>
+                <li>
+                  Produced videos with the toolchain and edited with DaVinci
+                  Resolve.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ========== EXPERIENCE ==========
+           COPY/PASTE TEMPLATE — duplicate <article class="experience-card">…</article>.
+           No image column — update organization, role, location, dates, and bullet list.
+      -->
+      <section id="experience" class="section section--reveal section--alt">
+        <div class="section__head">
+          <h2 class="section__title">Experience</h2>
+          <p class="section__lede">
+            Teaching, operations, design, and collaborative engineering —
+            grounded in clear communication.
+          </p>
+        </div>
+        <div class="card-stack">
+          <article class="experience-card">
+            <header class="experience-card__head">
+              <div>
+                <h3 class="experience-card__title">
+                  Texas McCombs School of Business
+                </h3>
+                <p class="experience-card__role">
+                  Undergraduate Teaching Assistant · Austin, TX
+                </p>
+              </div>
+              <p class="experience-card__dates">
+                <time datetime="2025-01">January 2025</time> — Present
+              </p>
+            </header>
+            <ul class="experience-card__list">
+              <li>
+                Lead 7+ hours per week of office hours teaching Excel
+                (formatting, charts, AVERAGEIF) and supporting student
+                workflows.
+              </li>
+              <li>
+                Explain and grade HTML website projects, AI analysis
+                assignments, and technology / legal case work.
+              </li>
+              <li>
+                Supported Foundations of Information Technology Management (MIS
+                302F) inside and outside the classroom.
+              </li>
+            </ul>
+          </article>
+
+          <article class="experience-card">
+            <header class="experience-card__head">
+              <div>
+                <h3 class="experience-card__title">Longhorn Developers</h3>
+                <p class="experience-card__role">
+                  Software Engineer · Austin, TX
+                </p>
+              </div>
+              <p class="experience-card__dates">
+                <time datetime="2025-09">September 2025</time> — Present
+              </p>
+            </header>
+            <ul class="experience-card__list">
+              <li>
+                Collaborating on Longhorn Loop / Journey — a platform supporting
+                student growth at UT (name evolved across resume versions).
+              </li>
+            </ul>
+          </article>
+
+          <article class="experience-card">
+            <header class="experience-card__head">
+              <div>
+                <h3 class="experience-card__title">UT Recreational Sports</h3>
+                <p class="experience-card__role">
+                  Facility Assistant · Austin, TX
+                </p>
+              </div>
+              <p class="experience-card__dates">
+                <time datetime="2024-01">January 2024</time> —
+                <time datetime="2024-05">May 2024</time>
+              </p>
+            </header>
+            <ul class="experience-card__list">
+              <li>
+                Facilitated equipment checkout (150+ patron interactions per
+                shift) with disciplined inventory tracking.
+              </li>
+              <li>
+                Ran opening and closing procedures across three facilities.
+              </li>
+            </ul>
+          </article>
+
+          <article class="experience-card">
+            <header class="experience-card__head">
+              <div>
+                <h3 class="experience-card__title">
+                  Sprinkle &amp; Co. Architects
+                </h3>
+                <p class="experience-card__role">
+                  Design Intern · San Antonio, TX
+                </p>
+              </div>
+              <p class="experience-card__dates">
+                <time datetime="2023-06">June 2023</time> —
+                <time datetime="2023-07">July 2023</time>
+              </p>
+            </header>
+            <ul class="experience-card__list">
+              <li>
+                Applied architectural drawings and CAD references to build a
+                scaled physical model of a $750K+ residence.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ========== HOBBIES & PERSONAL DEVELOPMENT ==========
+           COPY/PASTE TEMPLATE — duplicate <article class="hobby-card">…</article>.
+           Includes image area + title + body text (great for interests & initiatives).
+      -->
+      <section id="hobbies" class="section section--reveal">
+        <div class="section__head">
+          <h2 class="section__title">Hobbies &amp; personal development</h2>
+          <p class="section__lede">
+            Interests that sharpen creativity, discipline, and curiosity outside
+            of coursework.
+          </p>
+        </div>
+        <div class="card-grid card-grid--hobbies">
+          <article class="hobby-card">
+            <div class="hobby-card__media">
+              <img
+                src="images/hobbies/piano.jpg"
+                alt=""
+                width="480"
+                height="320"
+                loading="lazy"
+              />
+            </div>
+            <div class="hobby-card__body">
+              <h3 class="hobby-card__title">Piano &amp; musical practice</h3>
+              <p>
+                Long-form practice that blends pattern recognition with
+                expressive performance — a useful analog to debugging and
+                iteration in software.
+              </p>
+            </div>
+          </article>
+
+          <article class="hobby-card">
+            <div class="hobby-card__media">
+              <img
+                src="images/hobbies/aviation.jpg"
+                alt=""
+                width="480"
+                height="320"
+                loading="lazy"
+              />
+            </div>
+            <div class="hobby-card__body">
+              <h3 class="hobby-card__title">Aviation</h3>
+              <p>
+                Following aircraft systems, navigation concepts, and safety
+                culture — motivation for rigorous checklists and systems
+                thinking.
+              </p>
+            </div>
+          </article>
+
+          <article class="hobby-card">
+            <div class="hobby-card__media">
+              <img
+                src="images/hobbies/content.jpg"
+                alt=""
+                width="480"
+                height="320"
+                loading="lazy"
+              />
+            </div>
+            <div class="hobby-card__body">
+              <h3 class="hobby-card__title">Content creation</h3>
+              <p>
+                Storytelling, editing, and visual rhythm — skills that translate
+                directly to clear product demos and documentation.
+              </p>
+            </div>
+          </article>
+
+          <article class="hobby-card">
+            <div class="hobby-card__media">
+              <img
+                src="images/hobbies/electronics.jpg"
+                alt=""
+                width="480"
+                height="320"
+                loading="lazy"
+              />
+            </div>
+            <div class="hobby-card__body">
+              <h3 class="hobby-card__title">Electronics &amp; architecture</h3>
+              <p>
+                Hands-on builds and spatial design — from circuits to physical
+                models — reinforcing patience with complex assemblies.
+              </p>
+            </div>
+          </article>
+
+          <article class="hobby-card">
+            <div class="hobby-card__media">
+              <img
+                src="images/hobbies/calisthenics.jpg"
+                alt=""
+                width="480"
+                height="320"
+                loading="lazy"
+              />
+            </div>
+            <div class="hobby-card__body">
+              <h3 class="hobby-card__title">Calisthenics &amp; chess</h3>
+              <p>
+                Progressive strength training and strategic games — both reward
+                deliberate planning, adaptation, and consistency.
+              </p>
+            </div>
+          </article>
+
+          <article class="hobby-card">
+            <div class="hobby-card__media">
+              <img
+                src="images/hobbies/dobie-rhc.jpg"
+                alt=""
+                width="480"
+                height="320"
+                loading="lazy"
+              />
+            </div>
+            <div class="hobby-card__body">
+              <h3 class="hobby-card__title">
+                DobieTwenty21 Residence Hall Council · Vice President
+              </h3>
+              <p>
+                <time datetime="2023-09">September 2023</time> —
+                <time datetime="2025-05">May 2025</time>. Led an initiative to
+                add a $1,500 pull-up station to the Dobie gym serving ~750
+                residents.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p class="site-footer__name">Shalev Widen</p>
+        <p class="site-footer__meta">
+          Programs &amp; certifications: Morgan Stanley Early Insights · Excel
+          Skills for Business · Ultimate HTML5 &amp; CSS3 Series · Cursor · Bash
+          · DaVinci Resolve
+        </p>
+        <p class="site-footer__note">
+          © <span id="year"></span>. Built with static HTML, SCSS, and JS.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/dot-grid.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+@use "variables" as *;
+
+.site-footer {
+  margin-top: 2rem;
+  padding: 3rem clamp(1.25rem, 4vw, 2rem) 4rem;
+  border-top: 1px solid $border-subtle;
+  background: linear-gradient(180deg, transparent, rgba(95, 232, 255, 0.04));
+}
+
+.site-footer__inner {
+  max-width: $max-content;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.site-footer__name {
+  margin: 0 0 0.75rem;
+  font-family: $font-display;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.site-footer__meta {
+  margin: 0 auto 1rem;
+  max-width: 65ch;
+  color: $text-muted;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.site-footer__note {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(167, 173, 196, 0.75);
+}

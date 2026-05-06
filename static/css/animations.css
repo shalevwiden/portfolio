@@ -1,0 +1,81 @@
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.gradient1class {
+  background: linear-gradient(90deg, #60c4ff, #ff8a00, #e52e71);
+  position: relative;
+}
+.gradient1class::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #1100ff, #f5340d, #227348);
+  opacity: 0;
+  animation: fade 10s infinite;
+  animation-delay: 4s;
+}
+.gradient1class::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #ff8a00, #e52e71, #60c4ff);
+  opacity: 0;
+  animation: fade 10s infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+    transform: scale(1.2);
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.gradient2class {
+  position: relative;
+  animation: gradientMove 6s linear infinite;
+}
+.gradient2class::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #60c4ff, #ff8a00, #e52e71, #5e9652, #ff60a0);
+  opacity: 0;
+  animation: fade 6s infinite;
+}
+
+@keyframes rotategradient {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.gradient3class {
+  position: relative;
+  overflow: hidden;
+  background: conic-gradient(from 18deg, #938fc8, #e5a22e, #a20370);
+}
+.gradient3class::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(from 18deg, #938fc8 0%, #e5a22e 30%, #e2190a 60%, #11c7fe 100%);
+  animation: rotategradient 10s linear infinite;
+  transform-origin: center;
+  z-index: 0;
+  border-radius: 30px;
+}/*# sourceMappingURL=animations.css.map */

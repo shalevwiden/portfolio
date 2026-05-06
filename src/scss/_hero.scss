@@ -1,0 +1,116 @@
+@use "variables" as *;
+
+.hero {
+  padding-top: clamp(2rem, 6vw, 3.5rem);
+}
+
+.hero__layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+
+  @media (min-width: 900px) {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 3rem;
+  }
+}
+
+.hero__eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $accent-cyan;
+}
+
+.hero__title {
+  font-family: $font-display;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin: 0 0 1rem;
+}
+
+.hero__intro {
+  margin: 0 0 1.25rem;
+  color: $text-muted;
+  font-size: 1.08rem;
+}
+
+.hero__intro strong {
+  color: $text-primary;
+  font-weight: 600;
+}
+
+.skill-chips {
+  list-style: none;
+  margin: 0 0 1.75rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-chips li {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid $border-subtle;
+  background: rgba(255, 255, 255, 0.03);
+  color: $text-muted;
+}
+
+.hero__contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.5rem;
+  font-size: 0.98rem;
+}
+
+.contact-link {
+  color: $accent-amber;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-link:hover {
+  color: $accent-cyan;
+}
+
+.contact-dot {
+  color: $text-muted;
+}
+
+.hero__figure {
+  margin: 0;
+  justify-self: center;
+  width: min(100%, 380px);
+}
+
+.hero__img {
+  border-radius: $radius-lg;
+  border: 1px solid $border-subtle;
+  box-shadow: $shadow-glow;
+  object-fit: cover;
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  background: linear-gradient(145deg, $bg-card, #252836);
+  animation: hero-float 8s ease-in-out infinite;
+}
+
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}

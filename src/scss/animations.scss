@@ -1,0 +1,134 @@
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.gradient1class {
+  background: linear-gradient(90deg, #60c4ff, #ff8a00, #e52e71);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #1100ffff, #f5340dff, #227348ff);
+    opacity: 0;
+    animation: fade 10s infinite;
+    animation-delay: 4s;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #ff8a00, #e52e71, #60c4ff);
+    opacity: 0;
+    animation: fade 10s infinite;
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+    transform: scale(1.2);
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+// moving option
+.gradient2class {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      #60c4ff,
+      #ff8a00,
+      #e52e71,
+      #5e9652,
+      #ff60a0
+    );
+    opacity: 0;
+    animation: fade 6s infinite;
+  }
+
+  animation: gradientMove 6s linear infinite;
+}
+
+@keyframes rotategradient {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.gradient3class {
+  position: relative; // needed for pseudo-element positioning
+  overflow: hidden; // keeps ::before contained
+
+  // Optional base fallback
+  background: conic-gradient(from 18deg, #938fc8, #e5a22e, #a20370);
+
+  // Apply animation only if you want the element itself to spin (usually not)
+  // animation: rotategradient 10s linear infinite;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: conic-gradient(
+      from 18deg,
+      #938fc8 0%,
+      #e5a22e 30%,
+      #e2190a 60%,
+      #11c7fe 100%
+    );
+    animation: rotategradient 10s linear infinite;
+    transform-origin: center;
+    z-index: 0;
+    border-radius: 30px;
+    // height: 1200px;
+    // width: 200px;
+  }
+
+  //   &::after {
+  //     /* second gradient */
+  //     background: conic-gradient(
+  //       from 180deg,
+  //       #069926ff 0%,
+  //       #00ffe0 50%,
+  //       #ff0000ff 70%,
+
+  //       #0b5096ff 100%
+  //     );
+  //     animation: rotategradient 6s linear infinite reverse;
+  //     height: 1000px;
+  //     width: 400px;
+  //     border-radius: 30px;
+  //     content: "";
+  //     position: absolute;
+  //     inset: 0;
+  //     left: 600px;
+  //     top: -388px;
+
+  //     transform-origin: center;
+  //     z-index: 1; // above ::before
+  //   }
+}

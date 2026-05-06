@@ -1,0 +1,218 @@
+@use "variables" as *;
+
+.card-grid {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.card-grid--projects {
+  grid-template-columns: 1fr;
+
+  @media (min-width: 720px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card-grid--hobbies {
+  grid-template-columns: 1fr;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  border: 1px solid $border-subtle;
+  background: $bg-card;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.35);
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(95, 232, 255, 0.35);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.45);
+}
+
+.project-card__media {
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: linear-gradient(135deg, #22263a, #2d1f3d);
+}
+
+.project-card__media--static {
+  cursor: default;
+}
+
+.project-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-card__media img {
+  transform: scale(1.04);
+}
+
+.project-card__body {
+  padding: 1.35rem 1.35rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  flex: 1;
+}
+
+.project-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+
+.project-card__title {
+  margin: 0;
+  font-family: $font-display;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.project-card__title a {
+  text-decoration: none;
+}
+
+.project-card__title a:hover {
+  text-decoration: underline;
+}
+
+.project-card__date,
+.project-card__range {
+  margin: 0;
+  font-size: 0.85rem;
+  color: $accent-magenta;
+  font-weight: 600;
+}
+
+.project-card__tech {
+  margin: 0;
+  font-size: 0.9rem;
+  color: $text-muted;
+}
+
+.project-card__list {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: $text-muted;
+  font-size: 0.95rem;
+}
+
+.project-card__list li + li {
+  margin-top: 0.45rem;
+}
+
+.card-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.experience-card {
+  padding: 1.5rem 1.5rem 1.35rem;
+  border-radius: $radius-md;
+  border: 1px solid $border-subtle;
+  background: rgba(255, 255, 255, 0.03);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.experience-card:hover {
+  border-color: rgba(255, 193, 77, 0.35);
+  background: rgba(255, 193, 77, 0.04);
+}
+
+.experience-card__head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.85rem;
+}
+
+.experience-card__title {
+  margin: 0;
+  font-family: $font-display;
+  font-size: 1.2rem;
+}
+
+.experience-card__role {
+  margin: 0.15rem 0 0;
+  color: $text-muted;
+  font-size: 0.95rem;
+}
+
+.experience-card__dates {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $accent-cyan;
+  white-space: nowrap;
+}
+
+.experience-card__list {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: $text-muted;
+}
+
+.experience-card__list li + li {
+  margin-top: 0.4rem;
+}
+
+.hobby-card {
+  border-radius: $radius-lg;
+  overflow: hidden;
+  border: 1px solid $border-subtle;
+  background: $bg-card;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  transition: transform 0.35s ease;
+}
+
+.hobby-card:hover {
+  transform: translateY(-4px);
+}
+
+.hobby-card__media {
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: linear-gradient(120deg, #1e2a38, #301c36);
+}
+
+.hobby-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hobby-card__body {
+  padding: 1.25rem 1.35rem 1.5rem;
+}
+
+.hobby-card__title {
+  margin: 0 0 0.5rem;
+  font-family: $font-display;
+  font-size: 1.15rem;
+}
+
+.hobby-card__body p {
+  margin: 0;
+  color: $text-muted;
+  font-size: 0.95rem;
+}
