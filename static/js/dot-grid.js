@@ -19,13 +19,16 @@
   /** Pointer influence radius (px). */
   const influenceRadius = 260;
 
-  /** Radius multiplier swing from breathing (e.g. 0.14 → scales between ~0.86 and 1.14). */
-  const breatheRadiusAmp = 0.44;
+  /**
+   * Pulse amplitude near the cursor only (multiplied by proximity).
+   * Far from the pointer, dots stay a fixed idle size.
+   */
+  const breatheRadiusAmp = 0.2;
 
-  const breatheSpeed = 1.25;
+  const breatheSpeed = 2.25;
 
-  /** Opacity wobble (fraction of 1), subtle. */
-  const breatheAlphaAmp = 0.07;
+  /** Opacity pulse near cursor only (scaled by proximity). */
+  const breatheAlphaAmp = 0.06;
 
   /** #eee */
   const DOT_RGB = "238, 238, 238";
@@ -76,8 +79,8 @@
 
   function tick() {
     const nowSec = performance.now() * 0.001;
-    const breath = 1 + breatheRadiusAmp * Math.sin(nowSec * breatheSpeed);
-    const alphaBreath = breatheAlphaAmp * Math.sin(nowSec * breatheSpeed * 1.1);
+    const radiusWave = Math.sin(nowSec * breatheSpeed);
+    const alphaWave = Math.sin(nowSec * breatheSpeed * 1.1);
 
     ctx.clearRect(0, 0, width, height);
 
@@ -94,10 +97,14 @@
         const t = Math.max(0, 1 - dist / influenceRadius);
         const eased = t * t * (3 - 2 * t);
 
-        const r = (baseRadius + maxBoostRadius * eased) * breath;
+        // Breathe only inside the cursor influence (eased → 0 ⇒ no pulse)
+        const breathScale = 1 + breatheRadiusAmp * eased * radiusWave;
+        const r = (baseRadius + maxBoostRadius * eased) * breathScale;
         const alpha = Math.min(
           0.95,
-          alphaFar + alphaNearBoost * eased + alphaBreath,
+          alphaFar +
+            alphaNearBoost * eased +
+            breatheAlphaAmp * eased * alphaWave,
         );
 
         ctx.beginPath();
