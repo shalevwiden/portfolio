@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="static/css/main.css" />
@@ -91,14 +91,15 @@
 
       <!-- ========== SOFTWARE PROJECTS ==========
            COPY/PASTE TEMPLATE — duplicate the entire <article class="project-card">…</article>
-           block below (Projects grid). Update href, title, dates, tech line, bullets, and img src.
+           block below (Projects grid). Update href, title, dates, links, bullets, and img src.
+           Optional: <div class="project-card__links"> with one or more <a> tags — omit the whole block if none.
       -->
       <section id="projects" class="section section--reveal">
         <div class="section__head">
           <h2 class="section__title">Software projects</h2>
           <p class="section__lede">
-            Selected work spanning full-stack apps, automation, data tooling,
-            and creative front-end experiments.
+            Projects spanning full-stack apps, automation, data analysis, and
+            creative front-end experiments.
           </p>
         </div>
         <div class="card-grid card-grid--projects">
@@ -110,7 +111,7 @@
               rel="noopener noreferrer"
             >
               <img
-                src="images/projects/degreeview.jpg"
+                src="images/projects/currentdv.png"
                 alt=""
                 width="640"
                 height="360"
@@ -131,9 +132,14 @@
                   <time datetime="2025-06">June 2025</time> — Present
                 </p>
               </div>
-              <p class="project-card__tech">
-                Python, data pipelines, analytics
-              </p>
+              <div class="project-card__links">
+                <a
+                  href="https://degreeviewsite.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >degreeviewsite.com</a
+                >
+              </div>
               <ul class="project-card__list">
                 <li>
                   Designed a flexible multi-university system analyzing 90,191
@@ -161,7 +167,7 @@
               rel="noopener noreferrer"
             >
               <img
-                src="images/projects/blurbify.jpg"
+                src="images/projects/blurbifyhome.png"
                 alt=""
                 width="640"
                 height="360"
@@ -182,7 +188,14 @@
                   <time datetime="2025-10">October 2025</time> — Present
                 </p>
               </div>
-              <p class="project-card__tech">HTML, SCSS, JavaScript</p>
+              <div class="project-card__links">
+                <a
+                  href="https://blurbifyapp.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >blurbifyapp.com</a
+                >
+              </div>
               <ul class="project-card__list">
                 <li>
                   Built a site for creating and customizing short-form text and
@@ -203,7 +216,7 @@
               rel="noopener noreferrer"
             >
               <img
-                src="images/projects/degreeview.jpg"
+                src="images/projects/dvbanner.png"
                 alt=""
                 width="640"
                 height="360"
@@ -214,7 +227,7 @@
               <div class="project-card__meta">
                 <h3 class="project-card__title">
                   <a
-                    href="https://degreeviewsite.com"
+                    href="https://original.degreeviewsite.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     >DegreeView Original</a
@@ -224,7 +237,14 @@
                   <time datetime="2025-06">June 2025</time> — Present
                 </p>
               </div>
-
+              <div class="project-card__links">
+                <a
+                  href="https://original.degreeviewsite.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >https://original.degreeviewsite.com</a
+                >
+              </div>
               <ul class="project-card__list">
                 <li>
                   Created and displayed degree plan visualizations on all 141
@@ -252,7 +272,7 @@
               rel="noopener noreferrer"
             >
               <img
-                src="images/projects/records.jpg"
+                src="images/projects/biglogo.png"
                 alt=""
                 width="640"
                 height="360"
@@ -273,9 +293,14 @@
                   >April 2026</time
                 >
               </div>
-              <p class="project-card__tech">
-                React (TypeScript), Flask, PostgreSQL, Docker
-              </p>
+              <div class="project-card__links">
+                <a
+                  href="https://records-frontend.onrender.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >https://records-frontend.onrender.com/</a
+                >
+              </div>
               <ul class="project-card__list">
                 <li>
                   Architected and deployed a full-stack React SPA and Flask REST
@@ -296,7 +321,7 @@
           <article class="project-card">
             <div class="project-card__media project-card__media--static">
               <img
-                src="images/projects/ai-agents.jpg"
+                src="images/projects/n8n.png"
                 alt=""
                 width="640"
                 height="360"
@@ -312,9 +337,6 @@
                   >April 2026</time
                 >
               </div>
-              <p class="project-card__tech">
-                OpenAI API, Google Workspace, n8n
-              </p>
               <ul class="project-card__list">
                 <li>
                   Built a personal assistant using the OpenAI API with
@@ -359,13 +381,21 @@
                   <time datetime="2025-09">September 2025</time>
                 </p>
               </div>
-              <p class="project-card__tech">
-                Python, JSON-driven file generation
-              </p>
+              <div class="project-card__links">
+                <a
+                  href="https://tinyurl.com/excelanimation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View demo</a
+                >
+              </div>
               <ul class="project-card__list">
                 <li>
                   Engineered a JSON-based system to sequentially generate files
                   enabling animation-like visualizations.
+                </li>
+                <li>
+                  Created animations with Excel files and Matplotlib pie charts
                 </li>
               </ul>
             </div>
@@ -401,9 +431,14 @@
                   <time datetime="2025-11">November 2025</time>
                 </p>
               </div>
-              <p class="project-card__tech">
-                Python, Turtle graphics, OOP, DaVinci Resolve
-              </p>
+              <div class="project-card__links">
+                <a
+                  href="https://github.com/shalevwiden/turtleanimations"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </div>
               <ul class="project-card__list">
                 <li>
                   Developed SVG-focused animation tooling using Python Turtle
@@ -445,7 +480,14 @@
                   <time datetime="2025-10">October 2025</time> — Present
                 </p>
               </div>
-              <p class="project-card__tech">HTML, SCSS, JavaScript</p>
+              <div class="project-card__links">
+                <a
+                  href="https://blurbifyapp.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Try it out</a
+                >
+              </div>
               <ul class="project-card__list">
                 <li>
                   its fun to use CSS and Python to create customizable visuals
@@ -463,7 +505,7 @@
               rel="noopener noreferrer"
             >
               <img
-                src="images/projects/blurbify.jpg"
+                src="images/projects/rectangleswlogo.png"
                 alt=""
                 width="640"
                 height="360"
@@ -484,7 +526,14 @@
                   <time datetime="2025-10">October 2025</time> — Present
                 </p>
               </div>
-              <p class="project-card__tech">HTML, SCSS, JavaScript</p>
+              <div class="project-card__links">
+                <a
+                  href="https://thespeedway.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >thespeedway.vercel.app</a
+                >
+              </div>
               <ul class="project-card__list">
                 <li>
                   Intended to be an university based social site, starting with

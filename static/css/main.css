@@ -76,7 +76,7 @@ main,
 }
 
 .logo {
-  font-family: "Fraunces", Georgia, serif;
+  font-family: "Barlow", system-ui, -apple-system, sans-serif;
   font-weight: 700;
   font-size: 1.15rem;
   letter-spacing: -0.02em;
@@ -129,7 +129,7 @@ main,
 }
 
 .section__title {
-  font-family: "Fraunces", Georgia, serif;
+  font-family: "Barlow", system-ui, -apple-system, sans-serif;
   font-size: clamp(1.75rem, 4vw, 2.35rem);
   font-weight: 700;
   letter-spacing: -0.03em;
@@ -181,7 +181,7 @@ main,
 }
 
 .hero__title {
-  font-family: "Fraunces", Georgia, serif;
+  font-family: "Barlow", system-ui, -apple-system, sans-serif;
   font-size: clamp(2rem, 4.5vw, 3rem);
   font-weight: 700;
   line-height: 1.15;
@@ -275,6 +275,7 @@ main,
 
 .card-grid--projects {
   grid-template-columns: 1fr;
+  align-items: start;
 }
 @media (min-width: 720px) {
   .card-grid--projects {
@@ -310,9 +311,9 @@ main,
 
 .project-card__media {
   display: block;
-  aspect-ratio: 16/10;
   overflow: hidden;
   background: linear-gradient(135deg, #22263a, #2d1f3d);
+  line-height: 0;
 }
 
 .project-card__media--static {
@@ -321,13 +322,14 @@ main,
 
 .project-card__media img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  display: block;
+  vertical-align: middle;
   transition: transform 0.5s ease;
 }
 
 .project-card:hover .project-card__media img {
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 
 .project-card__body {
@@ -348,9 +350,10 @@ main,
 
 .project-card__title {
   margin: 0;
-  font-family: "Fraunces", Georgia, serif;
+  font-family: "Barlow", system-ui, -apple-system, sans-serif;
   font-size: 1.35rem;
   font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .project-card__title a {
@@ -369,10 +372,29 @@ main,
   font-weight: 600;
 }
 
-.project-card__tech {
+.project-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
   margin: 0;
+}
+
+.project-card__links a {
   font-size: 0.9rem;
-  color: #a7adc4;
+  font-weight: 600;
+  color: #5fe8ff;
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(95, 232, 255, 0.35);
+  background: rgba(95, 232, 255, 0.06);
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card__links a:hover {
+  color: #f4f5f8;
+  background: rgba(95, 232, 255, 0.14);
+  border-color: rgba(95, 232, 255, 0.55);
 }
 
 .project-card__list {
@@ -416,8 +438,9 @@ main,
 
 .experience-card__title {
   margin: 0;
-  font-family: "Fraunces", Georgia, serif;
+  font-family: "Barlow", system-ui, -apple-system, sans-serif;
   font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .experience-card__role {
@@ -477,8 +500,9 @@ main,
 
 .hobby-card__title {
   margin: 0 0 0.5rem;
-  font-family: "Fraunces", Georgia, serif;
+  font-family: "Barlow", system-ui, -apple-system, sans-serif;
   font-size: 1.15rem;
+  font-weight: 700;
 }
 
 .hobby-card__body p {
@@ -502,7 +526,7 @@ main,
 
 .site-footer__name {
   margin: 0 0 0.75rem;
-  font-family: "Fraunces", Georgia, serif;
+  font-family: "Barlow", system-ui, -apple-system, sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
 }
