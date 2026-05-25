@@ -45,7 +45,6 @@
 }
 .gradient2class {
   position: relative;
-  animation: gradientMove 6s linear infinite;
 }
 .gradient2class::before {
   content: "";
@@ -54,6 +53,9 @@
   background: linear-gradient(90deg, #60c4ff, #ff8a00, #e52e71, #5e9652, #ff60a0);
   opacity: 0;
   animation: fade 6s infinite;
+}
+.gradient2class {
+  animation: gradientMove 6s linear infinite;
 }
 
 @keyframes rotategradient {

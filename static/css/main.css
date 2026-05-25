@@ -11,7 +11,11 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "DM Sans", system-ui, -apple-system, sans-serif;
+  font-family:
+    "DM Sans",
+    system-ui,
+    -apple-system,
+    sans-serif;
   font-size: 1.05rem;
   line-height: 1.6;
   color: #f4f5f8;
@@ -76,12 +80,23 @@ main,
 }
 
 .logo {
-  font-family: "Barlow", system-ui, -apple-system, sans-serif;
+  font-family:
+    "Barlow",
+    system-ui,
+    -apple-system,
+    sans-serif;
   font-weight: 700;
   font-size: clamp(1.45rem, 3.5vw, 1.85rem);
   letter-spacing: -0.02em;
   text-decoration: none;
-  background: linear-gradient(115deg, #ffffff 0%, #c8e8ff 28%, #6ec8ff 55%, #e8f6ff 78%, #ffffff 100%);
+  background: linear-gradient(
+    115deg,
+    #ffffff 0%,
+    #c8e8ff 28%,
+    #6ec8ff 55%,
+    #e8f6ff 78%,
+    #ffffff 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -104,7 +119,10 @@ main,
   text-decoration: none;
   padding: 0.35rem 0.6rem;
   border-radius: 999px;
-  transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .site-nav a:hover {
@@ -119,7 +137,11 @@ main,
 }
 
 .section--alt {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 40%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    transparent 40%
+  );
   border-radius: 22px;
   margin-inline: clamp(0.75rem, 3vw, 1.5rem);
 }
@@ -129,7 +151,11 @@ main,
 }
 
 .section__title {
-  font-family: "Barlow", system-ui, -apple-system, sans-serif;
+  font-family:
+    "Barlow",
+    system-ui,
+    -apple-system,
+    sans-serif;
   font-size: clamp(1.75rem, 4vw, 2.35rem);
   font-weight: 700;
   letter-spacing: -0.03em;
@@ -146,7 +172,9 @@ main,
 .section--reveal {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .section--reveal.is-visible {
@@ -181,7 +209,11 @@ main,
 }
 
 .hero__title {
-  font-family: "Barlow", system-ui, -apple-system, sans-serif;
+  font-family:
+    "Barlow",
+    system-ui,
+    -apple-system,
+    sans-serif;
   font-size: clamp(2rem, 4.5vw, 3rem);
   font-weight: 700;
   line-height: 1.15;
@@ -243,25 +275,55 @@ main,
   color: #a7adc4;
 }
 
-.hero__figure {
+.hero__computer {
   margin: 0;
   justify-self: center;
-  width: min(100%, 380px);
+  width: min(100%, 560px);
 }
 
-.hero__img {
-  border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 0 1px rgba(95, 232, 255, 0.12), 0 24px 80px rgba(0, 0, 0, 0.45);
-  object-fit: cover;
-  aspect-ratio: 4/5;
+.hero__computer-frame {
   width: 100%;
-  background: linear-gradient(145deg, #1e212b, #252836);
-  animation: hero-float 8s ease-in-out infinite;
+  height: clamp(340px, 42vw, 560px);
+  border-radius: 22px;
+  overflow: hidden;
+  background: transparent;
+  animation: hero-float 9s ease-in-out infinite;
+  margin-right: 200px;
+}
+
+.hero__computer-frame iframe {
+  width: 120%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+}
+
+.globe-showcase {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.globe-showcase__figure {
+  margin: 0;
+}
+
+.globe-showcase__frame {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.globe-showcase__frame iframe {
+  width: 100%;
+  height: 100vh;
+  display: block;
+  border: 0;
 }
 
 @keyframes hero-float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -301,7 +363,10 @@ main,
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: #1e212b;
   box-shadow: 0 16px 50px rgba(0, 0, 0, 0.35);
-  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .project-card:hover {
@@ -351,7 +416,11 @@ main,
 
 .project-card__title {
   margin: 0;
-  font-family: "Barlow", system-ui, -apple-system, sans-serif;
+  font-family:
+    "Barlow",
+    system-ui,
+    -apple-system,
+    sans-serif;
   font-size: 1.35rem;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -389,7 +458,10 @@ main,
   border-radius: 999px;
   border: 1px solid rgba(95, 232, 255, 0.35);
   background: rgba(95, 232, 255, 0.06);
-  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .project-card__links a:hover {
@@ -420,7 +492,9 @@ main,
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.03);
-  transition: border-color 0.3s ease, background 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease;
 }
 
 .experience-card:hover {
@@ -439,7 +513,11 @@ main,
 
 .experience-card__title {
   margin: 0;
-  font-family: "Barlow", system-ui, -apple-system, sans-serif;
+  font-family:
+    "Barlow",
+    system-ui,
+    -apple-system,
+    sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
 }
@@ -504,7 +582,11 @@ main,
 
 .hobby-card__title {
   margin: 0;
-  font-family: "Barlow", system-ui, -apple-system, sans-serif;
+  font-family:
+    "Barlow",
+    system-ui,
+    -apple-system,
+    sans-serif;
   font-size: 1.15rem;
   font-weight: 700;
 }
@@ -584,7 +666,11 @@ main,
 
 .site-footer__name {
   margin: 0 0 0.75rem;
-  font-family: "Barlow", system-ui, -apple-system, sans-serif;
+  font-family:
+    "Barlow",
+    system-ui,
+    -apple-system,
+    sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
 }
@@ -655,7 +741,14 @@ main,
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, #60c4ff, #ff8a00, #e52e71, #5e9652, #ff60a0);
+  background: linear-gradient(
+    90deg,
+    #60c4ff,
+    #ff8a00,
+    #e52e71,
+    #5e9652,
+    #ff60a0
+  );
   opacity: 0;
   animation: fade 6s infinite;
 }
@@ -680,11 +773,15 @@ main,
   content: "";
   position: absolute;
   inset: 0;
-  background: conic-gradient(from 18deg, #938fc8 0%, #e5a22e 30%, #e2190a 60%, #11c7fe 100%);
+  background: conic-gradient(
+    from 18deg,
+    #938fc8 0%,
+    #e5a22e 30%,
+    #e2190a 60%,
+    #11c7fe 100%
+  );
   animation: rotategradient 10s linear infinite;
   transform-origin: center;
   z-index: 0;
   border-radius: 30px;
-}
-
-/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
