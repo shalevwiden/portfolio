@@ -16,6 +16,7 @@
 
 .card-grid--hobbies {
   grid-template-columns: 1fr;
+  align-items: start;
 
   @media (min-width: 640px) {
     grid-template-columns: repeat(2, 1fr);
@@ -213,23 +214,26 @@
 }
 
 .hobby-card__media {
-  aspect-ratio: 3 / 2;
   overflow: hidden;
   background: linear-gradient(120deg, #1e2a38, #301c36);
+  line-height: 0;
 }
 
 .hobby-card__media img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  display: block;
 }
 
 .hobby-card__body {
   padding: 1.25rem 1.35rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .hobby-card__title {
-  margin: 0 0 0.5rem;
+  margin: 0;
   font-family: $font-display;
   font-size: 1.15rem;
   font-weight: 700;
@@ -239,4 +243,58 @@
   margin: 0;
   color: $text-muted;
   font-size: 0.95rem;
+}
+
+.hobby-card__body a {
+  color: $accent-cyan;
+  font-weight: 600;
+}
+
+.hobby-card__body ul,
+.hobby-card__list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: $text-muted;
+  font-size: 0.95rem;
+  list-style: disc;
+}
+
+.hobby-card__body li,
+.hobby-card__list li {
+  padding-left: 0.15rem;
+  line-height: 1.55;
+}
+
+.hobby-card__body li::marker,
+.hobby-card__list li::marker {
+  color: $accent-cyan;
+}
+
+.hobby-card__body li + li,
+.hobby-card__list li + li {
+  margin-top: 0.45rem;
+}
+
+.hobby-card__embeds {
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.25rem;
+}
+
+.hobby-card__embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: $radius-md;
+  overflow: hidden;
+  border: 1px solid $border-subtle;
+  background: $bg-deep;
+}
+
+.hobby-card__embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
