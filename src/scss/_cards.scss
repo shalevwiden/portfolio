@@ -173,6 +173,25 @@
   background: rgba(255, 193, 77, 0.04);
 }
 
+.experience-card--placeholder {
+  border-style: dashed;
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.02);
+  color: $text-muted;
+
+  .experience-card__title,
+  .experience-card__role,
+  .experience-card__dates,
+  .experience-card__list {
+    color: inherit;
+    opacity: 0.75;
+  }
+
+  .experience-card__dates {
+    color: $text-muted;
+  }
+}
+
 .experience-card__head {
   display: flex;
   flex-wrap: wrap;
@@ -187,6 +206,7 @@
   font-family: $font-display;
   font-size: 1.2rem;
   font-weight: 700;
+  color: $text-primary;
 }
 
 .experience-card__role {

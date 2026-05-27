@@ -32,6 +32,7 @@
       <nav class="site-nav" aria-label="Primary">
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
+        <a href="#leadership">Leadership</a>
         <a href="#hobbies">Hobbies</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -116,6 +117,7 @@
       <!-- ========== SOFTWARE PROJECTS ==========
            COPY/PASTE TEMPLATE — duplicate the entire <article class="project-card">…</article>
            block below (Projects grid). Update href, title, dates, links, bullets, and img src.
+           For video: use <a class="project-card__media video"> with a YouTube <iframe> (see SVG / Animation with Files cards).
            Optional: <div class="project-card__links"> with one or more <a> tags — omit the whole block if none.
       -->
       <section id="projects" class="section section--reveal">
@@ -170,14 +172,17 @@
                   courses across 1,262 departments from 10 universities.
                 </li>
                 <li>
-                  Produced visualizations for all 141 degree programs at UT
-                  Austin and pipelined catalog data into 1,005 downloadable
-                  artifacts.
+                  Utilized OpenPyXL, mermaid.js, bs4, requests, os, csv, json,
+                  and pillow python libraries, mermaid.js for graph generation,
+                  and SQLite3 for queries.
                 </li>
                 <li>
-                  Implemented Google Analytics — reached roughly 2.4K users,
-                  15.2K page views, and 600 file downloads (figures vary by
-                  measurement window).
+                  Built responsive and functional web pages tables that
+                  includedwave like animations
+                </li>
+                <li>
+                  Implemented Google Analytics: reached roughly 2.5K users,
+                  15.5K page views, and 600+ file downloads
                 </li>
               </ul>
             </div>
@@ -228,6 +233,10 @@
                 <li>
                   Implemented five distinct animations plus a toggleable
                   flying-image interaction using SCSS and JS.
+                </li>
+                <li>
+                  649 total unique visitors, lots of feedback and suggestions
+                  from friends and users
                 </li>
               </ul>
             </div>
@@ -386,13 +395,24 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                src="images/projects/excel-animation.jpg"
-                alt=""
-                width="640"
-                height="360"
-                loading="lazy"
-              />
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/BLQ4vjWTmkc"
+                title="YouTube video player"
+                frameborder="0"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
             </a>
             <div class="project-card__body">
               <div class="project-card__meta">
@@ -411,6 +431,12 @@
               </div>
               <div class="project-card__links">
                 <a
+                  href="https://www.youtube.com/watch?v=BLQ4vjWTmkc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >YouTube</a
+                >
+                <a
                   href="https://tinyurl.com/excelanimation"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -420,10 +446,13 @@
               <ul class="project-card__list">
                 <li>
                   Engineered a JSON-based system to sequentially generate files
-                  enabling animation-like visualizations.
+                  setting customizable fonts, colors, text, and sizes with
+                  customizable JSON configurations.
                 </li>
                 <li>
-                  Created animations with Excel files and Matplotlib pie charts
+                  Created stop motion like animation with Excel files and
+                  Matplotlib pie charts by opening the files and then looping
+                  through them in order.
                 </li>
               </ul>
             </div>
@@ -495,7 +524,7 @@
           <article class="project-card">
             <a
               class="project-card__media"
-              href="https://blurbifyapp.com"
+              href="https://circletext.onrender.com"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -677,11 +706,12 @@
             </header>
             <ul class="experience-card__list">
               <li>
-                Facilitated equipment checkout (150+ patron interactions per
-                shift) with disciplined inventory tracking.
+                Facilitated equipment checkout (150+ patron interactions/shift)
+                and ensured accurate inventory management
               </li>
               <li>
-                Ran opening and closing procedures across three facilities.
+                Conducted facility opening and closing procedures across three
+                facilities maintaining efficient daily operations
               </li>
             </ul>
           </article>
@@ -703,9 +733,80 @@
             </header>
             <ul class="experience-card__list">
               <li>
-                Applied architectural drawings and CAD references to build a
-                scaled physical model of a $750K+ residence.
+                Applied blueprints, computer generated designs, and cardboard
+                construction materials to build a physical model for a planned
+                house in West Texas and presented finished model to clients
               </li>
+              <li>
+                Generated two simple house designs in SketchUp, learned about
+                different layers of architectural design
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ========== LEADERSHIP EXPERIENCE & ACTIVITIES ==========
+           COPY/PASTE TEMPLATE — duplicate <article class="experience-card">…</article>.
+           Same layout as Experience: organization, role, location, dates, bullet list.
+      -->
+      <section id="leadership" class="section section--reveal">
+        <div class="section__head">
+          <h2 class="section__title">Leadership experience &amp; activities</h2>
+          <p class="section__lede">
+            Campus initiatives and roles where I led peers, advocated for
+            residents, and drove projects from idea to outcome.
+          </p>
+        </div>
+        <div class="card-stack">
+          <article class="experience-card">
+            <header class="experience-card__head">
+              <div>
+                <h3 class="experience-card__title">
+                  DobieTwenty21 Residence Hall Council
+                </h3>
+                <p class="experience-card__role">Vice President</p>
+              </div>
+              <p class="experience-card__dates">
+                <time datetime="2023-09">September 2023</time> —
+                <time datetime="2025-05">May 2025</time>
+              </p>
+            </header>
+            <ul class="experience-card__list">
+              <li>
+                Led a successful initiative to add a $1,500 pull-up station to
+                the Dobie gym for a ~750-person residence hall.
+              </li>
+            </ul>
+          </article>
+
+          <article class="experience-card">
+            <header class="experience-card__head">
+              <div>
+                <h3 class="experience-card__title">
+                  University Finance Association
+                </h3>
+                <p class="experience-card__role">
+                  Investment Analyst · Austin, TX
+                </p>
+              </div>
+              <p class="experience-card__dates">
+                <time datetime="2024-09">September 2024</time> —
+                <time datetime="2025-05">May 2025</time>
+              </p>
+            </header>
+            <ul class="experience-card__list">
+              <li>Joined UFA's analyst program in my sophomore year</li>
+              <li>
+                Learned about securities, heard from speakers, participated in
+                activities like a finance jeapardy game
+              </li>
+              <li>
+                Participated in Westlake Securities Equity Research Analyst
+                Program Prepared financial analyses and valuation metrics on
+                United Rentals and Papa Johns
+              </li>
+              <li>Completed a weekly finance and economics news write up</li>
             </ul>
           </article>
         </div>
@@ -809,8 +910,12 @@
               <h3 class="hobby-card__title">Architecture</h3>
               <p>Architecture is a big interest of mine.</p>
               <ul class="hobby-card__list">
-                <li>Built an architectural model</li>
+                <li>Built an architectural model pictured above</li>
                 <li>A couple of architecture internships in highschool</li>
+
+                <li>
+                  Gained experience with CAD software like Revitt and SketchUp
+                </li>
               </ul>
             </div>
           </article>

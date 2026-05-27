@@ -63,7 +63,9 @@
 .section--alt {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 40%);
   border-radius: $radius-lg;
-  margin-inline: clamp(0.75rem, 3vw, 1.5rem);
+  margin-left: auto;
+  margin-right: auto;
+  width: min($max-content, calc(100% - 2 * clamp(0.75rem, 3vw, 1.5rem)));
 }
 
 .section__head {
